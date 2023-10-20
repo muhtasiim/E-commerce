@@ -1,0 +1,17 @@
+let cart = [];
+
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    displayCart();
+}
+
+function displayCart() {
+    const cartDiv = document.getElementById('cart');
+    cartDiv.innerHTML = '';
+
+    cart.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `<p>${item.name} - $${item.price}</p>`;
+        cartDiv.appendChild(itemDiv);
+    });
+}
