@@ -1,12 +1,12 @@
 let cart = [];
 
 function addToCart(productName, price) {
-    cart.push({ name: productName, price: price });
+    cart.push({ name: ProductName, price: Price });
     displayCart();
 }
 
 function displayCart() {
-    const cartDiv = document.getElementById('cart');
+    const cartDiv = document.getElementById('Cart');
     cartDiv.innerHTML = '';
 
     cart.forEach(item => {
